@@ -1,0 +1,6 @@
+[2021/08/29-00:26:28] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 20092 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/29-00:26:28] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/29-00:26:37] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 8.646 seconds (JVM running for 9.93)
+[2021/08/29-00:29:17] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 10552 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/29-00:29:17] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/29-00:29:26] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 8.846 seconds (JVM running for 10.031)

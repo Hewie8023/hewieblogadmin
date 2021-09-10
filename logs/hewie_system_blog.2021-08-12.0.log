@@ -1,0 +1,21 @@
+[2021/08/12-01:06:49] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on DESKTOP-Q7HRH3P with PID 9376 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/12-01:06:49] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/12-01:07:01] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 13.122 seconds (JVM running for 15.376)
+[2021/08/12-01:10:35] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on DESKTOP-Q7HRH3P with PID 18700 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/12-01:10:35] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/12-01:10:47] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 12.557 seconds (JVM running for 14.65)
+[2021/08/12-01:13:38] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on DESKTOP-Q7HRH3P with PID 7372 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/12-01:13:38] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/12-01:13:49] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 11.846 seconds (JVM running for 14.115)
+[2021/08/12-01:14:30] [http-nio-80-exec-1] [INFO ] [com.hewie.blog.service.impl.UserServiceImpl] : newTokenKey ==> 405f6b233f04db073adb4ddae5c8f969
+[2021/08/12-01:28:11] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on DESKTOP-Q7HRH3P with PID 17080 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/12-01:28:11] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/12-01:28:21] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 10.951 seconds (JVM running for 13.018)
+[2021/08/12-01:30:11] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on DESKTOP-Q7HRH3P with PID 25928 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/12-01:30:11] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/12-01:30:20] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 9.703 seconds (JVM running for 11.61)
+[2021/08/12-22:48:40] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on DESKTOP-Q7HRH3P with PID 3132 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/12-22:48:40] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/12-22:48:51] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 11.671 seconds (JVM running for 13.81)
+[2021/08/12-22:51:19] [http-nio-80-exec-1] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getCategories
+[2021/08/12-22:51:21] [http-nio-80-exec-1] [INFO ] [com.hewie.blog.service.impl.UserServiceImpl] : newTokenKey ==> d5423f12d3e826ced009c3c327032e11

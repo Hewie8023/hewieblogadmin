@@ -1,0 +1,29 @@
+[2021/08/16-13:28:52] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 5936 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/16-13:28:52] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/16-13:29:01] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 9.773 seconds (JVM running for 11.65)
+[2021/08/16-13:29:42] [http-nio-80-exec-1] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getPcLoginQrCode
+[2021/08/16-13:30:49] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 12972 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/16-13:30:49] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/16-13:30:59] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 10.695 seconds (JVM running for 12.582)
+[2021/08/16-13:44:29] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 14112 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/16-13:44:29] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/16-13:44:39] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 10.011 seconds (JVM running for 11.458)
+[2021/08/16-13:44:45] [http-nio-80-exec-2] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getPcLoginQrCode
+[2021/08/16-13:44:58] [http-nio-80-exec-3] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >error
+[2021/08/16-13:45:13] [http-nio-80-exec-4] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getQrCodeImage
+[2021/08/16-18:24:15] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 13600 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/16-18:24:15] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/16-18:24:24] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 9.679 seconds (JVM running for 11.344)
+[2021/08/16-18:24:32] [http-nio-80-exec-1] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getQrCodeImage
+[2021/08/16-18:25:24] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 11524 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/16-18:25:24] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/16-18:25:35] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 12.062 seconds (JVM running for 13.983)
+[2021/08/16-18:25:41] [http-nio-80-exec-2] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getQrCodeImage
+[2021/08/16-18:25:41] [http-nio-80-exec-2] [INFO ] [com.hewie.blog.service.impl.ImageServiceImpl] : content == >http://localhost/portal/app===876823804096020480
+[2021/08/16-23:09:22] [main] [INFO ] [com.hewie.blog.BlogApplication] : Starting BlogApplication on Hewie-pc with PID 14904 (E:\Code\HewieBlogSystem\target\classes started by 34954 in E:\Code\HewieBlogSystem)
+[2021/08/16-23:09:22] [main] [INFO ] [com.hewie.blog.BlogApplication] : The following profiles are active: dev
+[2021/08/16-23:09:29] [main] [INFO ] [com.hewie.blog.BlogApplication] : Started BlogApplication in 7.68 seconds (JVM running for 8.942)
+[2021/08/16-23:10:39] [http-nio-80-exec-1] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getPcLoginQrCode
+[2021/08/16-23:10:47] [http-nio-80-exec-3] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >checkQrCodeLoginState
+[2021/08/16-23:11:23] [http-nio-80-exec-4] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >getQrCodeImage
+[2021/08/16-23:11:33] [http-nio-80-exec-5] [INFO ] [com.hewie.blog.interceptor.ApiInterceptor] : method name == >checkQrCodeLoginState
