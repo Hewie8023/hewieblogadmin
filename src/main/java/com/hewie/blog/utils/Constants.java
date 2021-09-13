@@ -87,6 +87,8 @@ public interface Constants {
         String KEY_ARTICLE_CACHE = "key_article_cache_";
         String KEY_ARTICLE_VIEW_COUNT = "key_article_view_count_";
         String KEY_ARTICLE_LIST_FIRST_PAGE = "key_article_list_first_page";
+        String OWN = "own";
+        String OTHER = "other";
     }
 
     interface Comment {

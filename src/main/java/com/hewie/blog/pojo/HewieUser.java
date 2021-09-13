@@ -47,6 +47,50 @@ public class HewieUser {
     @Column(name = "update_time")
     private Date updateTime;
 
+    @Column(name = "sex")
+    private String sex = "2";
+
+    @Column(name = "workspace")
+    private String workspace;
+
+    @Column(name="position")
+    private String position;
+
+    @Column(name="skills")
+    private String skills;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getWorkspace() {
+        return workspace;
+    }
+
+    public void setWorkspace(String workspace) {
+        this.workspace = workspace;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String skills) {
+        this.skills = skills;
+    }
+
     public String getId() {
         return id;
     }

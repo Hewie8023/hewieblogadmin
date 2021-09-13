@@ -594,7 +594,21 @@ class UserServiceImpl extends BaseService implements IUserService {
         if (!TextUtils.isEmpty(hewieUser.getAvatar())) {
             userAccount.setAvatar(hewieUser.getAvatar());
         }
-        userAccount.setSign(hewieUser.getSign());
+        if (!TextUtils.isEmpty(hewieUser.getSign())) {
+            userAccount.setSign(hewieUser.getSign());
+        }
+        if (!TextUtils.isEmpty(hewieUser.getSkills())) {
+            userAccount.setSkills(hewieUser.getSkills());
+        }
+        if (!TextUtils.isEmpty(hewieUser.getWorkspace())) {
+            userAccount.setWorkspace(hewieUser.getWorkspace());
+        }
+        if (!TextUtils.isEmpty(hewieUser.getPosition())) {
+            userAccount.setPosition(hewieUser.getPosition());
+        }
+        if (!TextUtils.isEmpty(hewieUser.getSex())) {
+            userAccount.setSex(hewieUser.getSex());
+        }
         userAccount.setUpdateTime(new Date());
 
         userDao.save(userAccount);

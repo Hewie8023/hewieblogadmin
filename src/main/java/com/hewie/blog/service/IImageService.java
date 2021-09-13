@@ -17,4 +17,5 @@ public interface IImageService {
 
     void createQrCode(String code, HttpServletResponse response, HttpServletRequest request);
 
+
 }

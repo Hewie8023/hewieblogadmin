@@ -29,4 +29,6 @@ public interface IArticleService {
     ResponseResult getArticleCount();
 
 
+    ResponseResult listArticlesByUserId(int page, int size, String userId);
+
 }

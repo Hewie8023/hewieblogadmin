@@ -16,7 +16,7 @@ public class ArticleAdminApi {
     private IArticleService articleService;
 
     @CheckTooFrequentCommit
-    @PreAuthorize("@permission.admin()")
+    @PreAuthorize("@permission.admin() || @permission.loginUser()")
     @PostMapping
     public ResponseResult postArticle(@RequestBody Article article) {
         return articleService.postArticle(article);
@@ -27,21 +27,21 @@ public class ArticleAdminApi {
      * @param articleId
      * @return
      */
-    @PreAuthorize("@permission.admin()")
+    @PreAuthorize("@permission.admin() || @permission.loginUser()")
     @DeleteMapping("/{articleId}")
     public ResponseResult deleteArticle(@PathVariable("articleId") String articleId) {
         return articleService.deleteArticle(articleId);
     }
 
     @CheckTooFrequentCommit
-    @PreAuthorize("@permission.admin()")
+    @PreAuthorize("@permission.admin() || @permission.loginUser()")
     @PutMapping("/{articleId}")
     public ResponseResult updateArticle(@PathVariable("articleId") String articleId,
                                         @RequestBody Article article) {
         return articleService.updateArticle(articleId, article);
     }
 
-    @PreAuthorize("@permission.admin()")
+    @PreAuthorize("@permission.admin()  || @permission.loginUser()")
     @GetMapping("/{articleId}")
     public ResponseResult getArticle(@PathVariable("articleId") String articleId) {
         return articleService.getArticle(articleId, "admin");
@@ -57,7 +57,7 @@ public class ArticleAdminApi {
         return articleService.listArticles(page, size, keyword, categoryId, state);
     }
 
-    @PreAuthorize("@permission.admin()")
+    @PreAuthorize("@permission.admin()|| @permission.loginUser()")
     @DeleteMapping("/state/{articleId}")
     public ResponseResult deleteArticleStateByState(@PathVariable("articleId") String articleId) {
         return articleService.deleteArticleByState(articleId);

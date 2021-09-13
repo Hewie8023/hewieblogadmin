@@ -537,4 +537,29 @@ public class ArticleServiceImpl extends BaseService implements IArticleService {
         return ResponseResult.SUCCESS("文章总数获取成功").setData(count);
     }
 
+    @Override
+    public ResponseResult listArticlesByUserId(int page, int size, String userId) {
+        page = checkPage(page);
+        size = checkSize(size);
+        HewieUser hewieUser = userService.checkHewieUser();
+        Sort sort = new Sort(Sort.Direction.DESC, "createTime");
+        Pageable pageable = PageRequest.of(page - 1, size, sort);
+        Page<ArticleNoContent> all = articleNoContentDao.findAll(new Specification<ArticleNoContent>() {
+            @Override
+            public Predicate toPredicate(Root<ArticleNoContent> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder cb) {
+                Predicate userPre = cb.equal(root.get("userId").as(String.class), userId);
+                if (hewieUser != null && hewieUser.getId().equals(userId)) {
+                    Predicate delete = cb.notEqual(root.get("state").as(String.class), Constants.Article.STATE_DELETE);
+                    return cb.and(userPre, delete);
+                } else {
+                    Predicate delete = cb.notEqual(root.get("state").as(String.class), Constants.Article.STATE_DELETE);
+                    Predicate draft = cb.notEqual(root.get("state").as(String.class), Constants.Article.STATE_DRAFT);
+                    Predicate and = cb.and(delete, draft);
+                    return cb.and(userPre, and);
+                }
+            }
+        }, pageable);
+        return ResponseResult.SUCCESS("获取文章列表成功").setData(all);
+    }
+
 }

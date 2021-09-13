@@ -38,4 +38,22 @@ public class PermissionService {
         }
         return false;
     }
+
+    /**
+     * 用户登录
+     * @return
+     */
+    public boolean loginUser() {
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = requestAttributes.getRequest();
+        String cookie = CookieUtils.getCookie(request, Constants.User.KEY_COOKIE_TOKEN);
+        if (TextUtils.isEmpty(cookie)) {
+            return false;
+        }
+        HewieUser hewieUser = userService.checkHewieUser();
+        if (hewieUser == null) {
+            return false;
+        }
+        return true;
+    }
 }

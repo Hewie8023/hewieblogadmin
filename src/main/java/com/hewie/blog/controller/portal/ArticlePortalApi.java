@@ -1,14 +1,14 @@
 package com.hewie.blog.controller.portal;
 
+import com.hewie.blog.interceptor.CheckTooFrequentCommit;
+import com.hewie.blog.pojo.Article;
 import com.hewie.blog.response.ResponseResult;
 import com.hewie.blog.service.IArticleService;
 import com.hewie.blog.service.ICategoryService;
 import com.hewie.blog.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/portal/article")
@@ -36,6 +36,13 @@ public class ArticlePortalApi {
                                                  @PathVariable("page") int page,
                                                  @PathVariable("size") int size) {
         return articleService.listArticles(page, size, null, categoryId, Constants.Article.STATE_PUBLISH);
+    }
+
+    @GetMapping("/list/byUid/{userId}/{page}/{size}")
+    public ResponseResult listArticlesByUserId(@PathVariable("userId") String userId,
+                                               @PathVariable("page") int page,
+                                               @PathVariable("size") int size){
+        return articleService.listArticlesByUserId(page, size, userId);
     }
 
     /**
