@@ -31,4 +31,11 @@ public interface IArticleService {
 
     ResponseResult listArticlesByUserId(int page, int size, String userId);
 
+    ResponseResult getArticleNumByUserId(String userId);
+
+    ResponseResult getViewNumByUserId(String userId);
+
+    ResponseResult listTopTenArticles();
+
+    ResponseResult listLastTenArticles();
 }

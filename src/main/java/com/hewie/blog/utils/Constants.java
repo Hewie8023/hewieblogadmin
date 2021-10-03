@@ -47,6 +47,7 @@ public interface Constants {
 
     interface TimeValueInSecond {
         // 单位s
+        int FIVE_SEC = 5;
         int TEN_SEC = 10;
         int MIN = 60;
         int HOUR = 60 * MIN;
@@ -89,6 +90,8 @@ public interface Constants {
         String KEY_ARTICLE_LIST_FIRST_PAGE = "key_article_list_first_page";
         String OWN = "own";
         String OTHER = "other";
+        String KEY_TOP_TEN_ARTICLE = "key_top_ten_article";
+        String KEY_LAST_TEN_ARTICLE = "key_last_ten_article";
     }
 
     interface Comment {

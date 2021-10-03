@@ -3,24 +3,24 @@ spring:
     name: hewie_blog_system
 
   datasource:
-    url:  jdbc:mysql://172.25.172.52:3306/hewie_blog_system?characterEncoding=utf-8&useSSL=false
+    url:  jdbc:mysql://172.25.9.123:3306/hewie_blog_system?characterEncoding=utf-8&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 102426
   redis:
-    host: 172.25.172.52
+    host: 172.25.9.123
     port: 6379
     password: 102426
     database: 1
   data:
     solr:
-      host: http://172.25.172.52:8983/solr/hewie_blog_core
+      host: http://172.25.9.123:8983/solr/hewie_blog_core
 
 server:
-  port: 2020
+  port: 2021
 # 使用docker來部署,这里的路径应该是docker内部的路径
-# 可以映射成这个路径 /home/hewie/docker/hewieBlog/upload
-hewie.blog.image.save-path: /root/docker/imageUpload
+# 可以映射成这个路径 /root/docker/imageUpload
+hewie.blog.image.save-path: /usr/app/upload
 # 2M
 hewie.blog.image.max-size: 1048576
 

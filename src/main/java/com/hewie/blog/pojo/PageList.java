@@ -23,6 +23,16 @@ public class PageList<T> implements Serializable {
     //数据
     private List<T> contents;
 
+    private List<CommentRes> commentContent;
+
+    public List<CommentRes> getCommentContent() {
+        return commentContent;
+    }
+
+    public void setCommentContent(List<CommentRes> commentContent) {
+        this.commentContent = commentContent;
+    }
+
     public PageList() {
     }
 
@@ -107,5 +117,9 @@ public class PageList<T> implements Serializable {
         setTotalCount(all.getTotalElements());
         setTotalPage(all.getTotalPages());
         setPageSize(all.getSize());
+    }
+
+    public void parseComments(List<CommentRes> all) {
+        setCommentContent(all);
     }
 }
