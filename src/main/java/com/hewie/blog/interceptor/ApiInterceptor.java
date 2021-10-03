@@ -53,7 +53,7 @@ public class ApiInterceptor extends HandlerInterceptorAdapter {
                         writer.flush();
                         return false;
                     } else {
-                        redisUtil.set(Constants.User.KEY_COMMIT_TOKEN_RECORD + tokenKey + methodName, "true", Constants.TimeValueInSecond.TEN_SEC);
+                        redisUtil.set(Constants.User.KEY_COMMIT_TOKEN_RECORD + tokenKey + methodName, "true", Constants.TimeValueInSecond.FIVE_SEC);
                     }
                 }
             }

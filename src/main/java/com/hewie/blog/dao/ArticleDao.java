@@ -18,4 +18,10 @@ public interface ArticleDao extends JpaRepository<Article, String>, JpaSpecifica
 
     @Query(nativeQuery = true, value = "select `labels` from `tb_article` where `id` = ?")
     String listArticlesById(String articleId);
+
+    @Query(nativeQuery = true, value = "SELECT COUNT(*) FROM `tb_article` WHERE `user_id`=?")
+    int getArticleNumByUserId(String userId);
+
+    @Query(nativeQuery = true, value = "SELECT SUM(`view_count`) AS  allNum FROM `tb_article` WHERE `user_id`=?")
+    int getViewNumByUserId(String userId);
 }

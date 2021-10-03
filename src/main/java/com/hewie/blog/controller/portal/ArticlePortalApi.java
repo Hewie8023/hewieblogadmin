@@ -95,4 +95,25 @@ public class ArticlePortalApi {
     public ResponseResult getCategories() {
         return categoryService.listCategories();
     }
+
+    @GetMapping("/article/num/{userId}")
+    public ResponseResult getArticleNumByUserId(@PathVariable("userId") String userId) {
+        return articleService.getArticleNumByUserId(userId);
+    }
+
+    @GetMapping("/view/num/{userId}")
+    public ResponseResult getViewNumByUserId(@PathVariable("userId") String userId) {
+        return articleService.getViewNumByUserId(userId);
+    }
+
+    @GetMapping("/top-ten")
+    public ResponseResult listTopTenArticles() {
+        return  articleService.listTopTenArticles();
+    }
+
+    @GetMapping("/last-ten")
+    public ResponseResult listLastTenArticles(){
+        return articleService.listLastTenArticles();
+    }
+
 }

@@ -33,10 +33,12 @@ E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\Image.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\IUserService.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\Article.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\RedisUtil.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\Replay.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\IWebsiteInfoService.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\PermissionService.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\SolrTestService.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\EmailSender.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\dao\ReplayDao.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\ImageServiceImpl.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\controller\admin\ImageAdminApi.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\LooperServiceImpl.java
@@ -48,6 +50,7 @@ E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\RefreshToken.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\dao\ImageDao.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\FriendLinkServiceImpl.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\dao\SettingsDao.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\dao\FirstCommentDao.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\controller\portal\ArticlePortalApi.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\response\ResponseState.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\controller\admin\ArticleAdminApi.java
@@ -67,6 +70,7 @@ E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\dao\UserNoPasswordDao.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\SnowflakeIdWorker.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\controller\ErrorPageController.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\config\ErrorCodeConfig.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\MarkdownUtils.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\Constants.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\IFriendLinkService.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\SearchResult.java
@@ -79,9 +83,13 @@ E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\ArticleService
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\controller\portal\WebSiteInfoPortalApi.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\Looper.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\CookieUtils.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\CommentRes.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\SolrServiceImpl.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\dao\CommentDao.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\ILooperService.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\utils\QrCodeUtils.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\pojo\Firstcomment.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\config\WebSecurityConfig.java
 E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\controller\user\UserApi.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\ICommentResService.java
+E:\Code\HewieBlogSystem\src\main\java\com\hewie\blog\service\impl\CommentResServiceImpl.java

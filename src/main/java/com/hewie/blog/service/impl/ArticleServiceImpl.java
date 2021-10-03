@@ -11,10 +11,7 @@ import com.hewie.blog.response.ResponseResult;
 import com.hewie.blog.service.IArticleService;
 import com.hewie.blog.service.ISolrService;
 import com.hewie.blog.service.IUserService;
-import com.hewie.blog.utils.Constants;
-import com.hewie.blog.utils.RedisUtil;
-import com.hewie.blog.utils.SnowflakeIdWorker;
-import com.hewie.blog.utils.TextUtils;
+import com.hewie.blog.utils.*;
 import com.vladsch.flexmark.ext.jekyll.tag.JekyllTagExtension;
 import com.vladsch.flexmark.ext.tables.TablesExtension;
 import com.vladsch.flexmark.ext.toc.SimTocExtension;
@@ -169,6 +166,8 @@ public class ArticleServiceImpl extends BaseService implements IArticleService {
 
         redisUtil.del(Constants.Article.KEY_ARTICLE_LIST_FIRST_PAGE);
 
+        redisUtil.del(Constants.Article.KEY_LAST_TEN_ARTICLE);
+
         this.setupLabels(article.getLabels());
         //返回结果，只有一种case使用到这个ID
         //如果要做程序自动保存草稿（比如每30s保存一次，就需要加上这个ID，否则会重复提交）
@@ -307,7 +306,7 @@ public class ArticleServiceImpl extends BaseService implements IArticleService {
                 if (Constants.Article.TYPE_MARKDOWN.equals(article.getType())) {
                     //转成html
                     // markdown to html
-                    MutableDataSet options = new MutableDataSet().set(Parser.EXTENSIONS, Arrays.asList(
+                    /*MutableDataSet options = new MutableDataSet().set(Parser.EXTENSIONS, Arrays.asList(
                             TablesExtension.create(),
                             JekyllTagExtension.create(),
                             TocExtension.create(),
@@ -316,7 +315,9 @@ public class ArticleServiceImpl extends BaseService implements IArticleService {
                     Parser parser = Parser.builder(options).build();
                     HtmlRenderer renderer = HtmlRenderer.builder(options).build();
                     Node document = parser.parse(article.getContent());
-                    html = renderer.render(document);
+                    //html = MDTool.markdown2Html(article.getContent());
+                    html = renderer.render(document);*/
+                    html = MarkdownUtils.markdownToHtmlExtensions(article.getContent());
                 } else if (Constants.Article.TYPE_RICH_TEXT.equals(article.getType())) {
                     html = article.getContent();
                 }
@@ -560,6 +561,50 @@ public class ArticleServiceImpl extends BaseService implements IArticleService {
             }
         }, pageable);
         return ResponseResult.SUCCESS("获取文章列表成功").setData(all);
+    }
+
+    @Override
+    public ResponseResult getArticleNumByUserId(String userId) {
+        int num = articleDao.getArticleNumByUserId(userId);
+        return ResponseResult.SUCCESS("获取数量成功").setData(num);
+    }
+
+    @Override
+    public ResponseResult getViewNumByUserId(String userId) {
+        int num = articleDao.getViewNumByUserId(userId);
+        return ResponseResult.SUCCESS("获取阅读量成功").setData(num);
+    }
+
+    @Override
+    public ResponseResult listTopTenArticles() {
+        String topTenArticlesStr = (String) redisUtil.get(Constants.Article.KEY_TOP_TEN_ARTICLE);
+        if (!TextUtils.isEmpty(topTenArticlesStr)) {
+            PageList<ArticleNoContent> result = gson.fromJson(topTenArticlesStr, new TypeToken<PageList<ArticleNoContent>>(){}.getType());
+            return ResponseResult.SUCCESS("获取最热文章成功").setData(result);
+        }
+        Sort sort = new Sort(Sort.Direction.DESC, "viewCount");
+        Pageable pageable = PageRequest.of(0, 10, sort);
+        Page<ArticleNoContent> all = articleNoContentDao.findAll(pageable);
+        PageList<ArticleNoContent> result = new PageList<>();
+        result.parsePage(all);
+        redisUtil.set(Constants.Article.KEY_TOP_TEN_ARTICLE, gson.toJson(result), Constants.TimeValueInSecond.HOUR);
+        return ResponseResult.SUCCESS("获取最热文章成功").setData(all);
+    }
+
+    @Override
+    public ResponseResult listLastTenArticles() {
+        String lastTenArticlesStr = (String) redisUtil.get(Constants.Article.KEY_LAST_TEN_ARTICLE);
+        if (!TextUtils.isEmpty(lastTenArticlesStr)) {
+            PageList<ArticleNoContent> result = gson.fromJson(lastTenArticlesStr, new TypeToken<PageList<ArticleNoContent>>(){}.getType());
+            return ResponseResult.SUCCESS("获取最新文章成功").setData(result);
+        }
+        Sort sort = new Sort(Sort.Direction.DESC, "createTime");
+        Pageable pageable = PageRequest.of(0, 10, sort);
+        Page<ArticleNoContent> all = articleNoContentDao.findAll(pageable);
+        PageList<ArticleNoContent> result = new PageList<>();
+        result.parsePage(all);
+        redisUtil.set(Constants.Article.KEY_LAST_TEN_ARTICLE, gson.toJson(result), Constants.TimeValueInSecond.HOUR);
+        return ResponseResult.SUCCESS("获取最新文章成功").setData(all);
     }
 
 }
